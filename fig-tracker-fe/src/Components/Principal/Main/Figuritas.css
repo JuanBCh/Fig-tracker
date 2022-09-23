@@ -1,0 +1,7 @@
+.div-paises{
+    display: flex;
+    flex-wrap: wrap;
+}
+.div-paises h2{
+    width: 100%;
+}

@@ -1,9 +1,9 @@
 import Figuritas from "./Figuritas";
 
-function Main({jugadores}) {
+function Main({jugadores, setX}) {
   return (
     <div>
-      <Figuritas jugadores={jugadores} />
+      <Figuritas jugadores={jugadores} setX={setX} />
     </div>
   );
 }

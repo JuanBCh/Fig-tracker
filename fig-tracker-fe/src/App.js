@@ -5,6 +5,7 @@ import Main from "./Components/Principal/Main/Main";
 
 function App() {
   const [jugadores, setJugadores] = useState([]);
+  const [x, setX] = useState(0);
 
   useEffect(() => {
     fetch("http://127.0.0.1:5433/figuritas")
@@ -12,14 +13,12 @@ function App() {
       .then((results) => {
         setJugadores(results);
       });
-  }, []);
-
-  console.log("jugadores:", jugadores);
+  }, [x]);
 
   return (
     <div className="App">
       <Header />
-      <Main jugadores={jugadores} />
+      <Main jugadores={jugadores} setX={setX} />
     </div>
   );
 }
